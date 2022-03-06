@@ -2,6 +2,7 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import { useEffect, useContext } from 'react'
 import { ThemeContext } from '../../contexts/theme'
+import Header from '../Header/Header'
 import './Particle.css'
 
 const Particle = () => {
@@ -26,6 +27,12 @@ const Particle = () => {
 
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
 
+  const titleStyle = {
+    fontFamily: 'Syncopate, sans-serif', 
+    fontWeight: 10,
+    color: themeName === 'dark' ? "white" : "black"
+  }
+
   const linkStyle = {
     color: "white"
   }
@@ -33,19 +40,30 @@ const Particle = () => {
   const iconStyle = {
     fontSize: "2em", 
     color: themeName === 'dark' ? "white" : "black",
-    padding: "0px 5px 0px"
+    padding: "0px 5px 0px",
+    display: "inline-block"
   }
 
   return (
     <div id="particles">
+      <div id="header">
+        <Header/>
+      </div>
       <div id="intro">
-        <h2 style={{fontFamily: 'Syncopate, sans-serif', fontWeight: 10}}>
+        <h2 style={titleStyle}>
           Frank Pacini
-          <a href="resume.pdf" style={linkStyle}>
-            <img src="https://static.thenounproject.com/png/202530-200.png" alt="" height="35" width="35"/>
-          </a>
         </h2>
         <hr style={{width: "50%", backgroundColor: "#E83951", borderColor: "#E83951"}}/>
+        <a href="resume.pdf" style={{display: "inline-block", verticalAlign: "top"}}>
+          {
+            themeName === 'light' ? (
+              <img src="/static/assets/resume-icon.png" alt="" height="35" width="35"/>
+            )
+            : (
+              <img src="/static/assets/resume-icon-invert.png" alt="" height="35" width="35"/>
+            )
+          }
+        </a>
         <a href="https://www.linkedin.com/in/#/" style={linkStyle}>
           <i className="fab fa-linkedin" style={iconStyle}/>
         </a>
