@@ -1,0 +1,85 @@
+/* .popup-light {
+  --popup-clr-bg: #fcfcfc;
+  --popup-clr-bg-alt: #fff;
+  --popup-clr-fg: #555;
+  --popup-clr-fg-alt: #444;
+  --popup-clr-primary: #2978b5;
+  --popup-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.popup-dark {
+  --popup-clr-bg: #23283e;
+  --popup-clr-bg-alt: #2a2f4c;
+  --popup-clr-fg: #bdbddd;
+  --popup-clr-fg-alt: #cdcdff;
+  --popup-clr-primary: #90a0d9;
+  --popup-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+} */
+
+.popup-light-overlay {
+  color: #555;
+}
+
+.popup-light-content {
+  color: #555;
+  background-color: #fcfcfc;
+  border-color: #fcfcfc;
+}
+
+.popup-dark-overlay {
+  color: #bdbddd;
+}
+
+.popup-dark-content {
+  color: #bdbddd;
+  background-color: #23283e;
+  border-color: #23283e;
+}
+
+.modal {
+  font-size: 12px;
+  max-height: 90vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-title {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+.modal-content {
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.control-dots {
+  background-color: rgba(0,0,0,0)
+}
+
+.modal-links {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  font-weight: 900;
+  /* background: #ffffff; */
+  border-radius: 18px;
+  border: 1px solid;
+}
