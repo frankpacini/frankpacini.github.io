@@ -2,9 +2,13 @@ import {useContext, useRef} from 'react';
 import uniqid from 'uniqid';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LaunchIcon from '@material-ui/icons/Launch';
+
 import Popup from 'reactjs-popup';
 import { Carousel } from 'react-responsive-carousel';
+import ReactPlayer from 'react-player'
+
 import { ThemeContext } from '../../contexts/theme'
+
 import 'reactjs-popup/dist/index.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './ProjectPopup.css'
@@ -31,19 +35,15 @@ const ProjectPopup = ({ project }) => {
           <div style={{margin: "15px"}}>
             <h3 className="modal-title"> {project.name} </h3>
             <div className="modal-content">
-              <Carousel>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1603408639326-fad10b8fbc1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bG9uZyUyMHdheXxlbnwwfHwwfHw%3D&w=1000&q=80" alt=""/>
-                    {/* <p className="legend">Legend 1</p> */}
-                </div>
-                <div>
-                    <img src="https://miro.medium.com/max/600/0*npRqA-IodJWs4jae.jpg" alt=""/>
-                    {/* <p className="legend">Legend 2</p> */}
-                </div>
-                <div>
-                    <img src="https://res.cloudinary.com/monday-blogs/w_768,h_384,c_fit/fl_lossy,f_auto,q_auto/wp-blog/2021/01/application-software-2.jpg" alt=""/>
-                    {/* <p className="legend">Legend 3</p> */}
-                </div>
+              <Carousel showThumbs={false}>
+                {project.videos.map((video) => 
+                  <ReactPlayer key={uniqid()} controls width="100%" url={video} />
+                )}
+                {project.pictures.map((picture) => 
+                  <div>
+                    <img key={uniqid()} src={picture} alt=""/>
+                  </div>
+                )}
               </Carousel>
 
               <p className='project__description'>{project.description}</p>

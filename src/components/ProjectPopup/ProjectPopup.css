@@ -60,6 +60,14 @@
   display: none; /* for Chrome, Safari, and Opera */
 }
 
+/* .carousel .control-next.control-arrow:before {
+  border-left-color: #23283f;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right-color: #23283f;
+} */
+
 .control-dots {
   background-color: rgba(0,0,0,0)
 }

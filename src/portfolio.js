@@ -27,6 +27,13 @@ const projects = [
     stack: ['SASS', 'TypeScript', 'React'],
     sourceCode: 'https://github.com',
     livePreview: 'https://github.com',
+    pictures: [
+      "https://miro.medium.com/max/600/0*npRqA-IodJWs4jae.jpg",
+      "https://res.cloudinary.com/monday-blogs/w_768,h_384,c_fit/fl_lossy,f_auto,q_auto/wp-blog/2021/01/application-software-2.jpg"
+    ],
+    videos: [
+      '/static/assets/eatwell.mp4'
+    ],
   },
   {
     name: 'Project 2',
@@ -35,6 +42,12 @@ const projects = [
     stack: ['SASS', 'TypeScript', 'React'],
     sourceCode: 'https://github.com',
     livePreview: 'https://github.com',
+    pictures: [
+      "https://images.unsplash.com/photo-1603408639326-fad10b8fbc1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bG9uZyUyMHdheXxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "https://miro.medium.com/max/600/0*npRqA-IodJWs4jae.jpg",
+      "https://res.cloudinary.com/monday-blogs/w_768,h_384,c_fit/fl_lossy,f_auto,q_auto/wp-blog/2021/01/application-software-2.jpg"
+    ],
+    videos: [],
   },
   {
     name: 'Project 3',
@@ -43,6 +56,8 @@ const projects = [
     stack: ['SASS', 'TypeScript', 'React'],
     sourceCode: 'https://github.com',
     livePreview: 'https://github.com',
+    pictures: [],
+    videos: [],
   },
 ]
 
