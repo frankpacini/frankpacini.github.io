@@ -12,11 +12,11 @@ const Projects = () => {
 
       <div className='projects__grid'>
         {projects.map((project) => (
-          <div className='project'>
+          <div key={uniqid()} className='project'>
             <h3>{project.name}</h3>
 
             <p className='project__description'>{project.description}</p>
-            <ProjectPopup key={uniqid()} project={project} />
+            <ProjectPopup project={project} />
           </div>
         ))}
       </div>
