@@ -53,6 +53,7 @@ const Particle = () => {
         <Header/>
       </div>
       <div id="intro">
+      <img src="/static/assets/profile.png" alt="Profile" style={{width: '250px'}}/>
         <h2 style={titleStyle}>
           {name}
         </h2>
