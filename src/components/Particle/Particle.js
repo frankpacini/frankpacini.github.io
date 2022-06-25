@@ -4,8 +4,11 @@ import { useEffect, useContext } from 'react'
 import { ThemeContext } from '../../contexts/theme'
 import Header from '../Header/Header'
 import './Particle.css'
+import { about } from '../../portfolio'
 
 const Particle = () => {
+  const { name, role, description, resume, social } = about
+
   useEffect(() => {
     const particleGroundScript = document.createElement("script");
     particleGroundScript.type = "text/javascript"
@@ -23,7 +26,7 @@ const Particle = () => {
 
     document.body.appendChild(particleGroundScript);
     document.body.appendChild(demoScript);
-  })
+  }, [])
 
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
 
@@ -51,10 +54,13 @@ const Particle = () => {
       </div>
       <div id="intro">
         <h2 style={titleStyle}>
-          Frank Pacini
+          {name}
         </h2>
         <hr style={{width: "50%", backgroundColor: "#E83951", borderColor: "#E83951"}}/>
-        <a href="resume.pdf" style={{display: "inline-block", verticalAlign: "top"}}>
+        {/* <h3 style={titleStyle}>
+          {role}
+        </h3> */}
+        <a href={resume} style={{display: "inline-block", verticalAlign: "top"}}>
           {
             themeName === 'light' ? (
               <img src="/static/assets/resume-icon.png" alt="" height="35" width="35"/>
@@ -64,18 +70,21 @@ const Particle = () => {
             )
           }
         </a>
-        <a href="https://www.linkedin.com/in/#/" style={linkStyle}>
-          <i className="fab fa-linkedin" style={iconStyle}/>
-        </a>
-        <a href="https://www.facebook.com/#/" style={linkStyle}>
-          <i className="fab fa-facebook" style={iconStyle}/>
-        </a>
-        <a href="https://github.com/#/" style={linkStyle}>
-          <i className="fab fa-github" style={iconStyle}/>
-        </a>
-        <a href="https://medium.com/@#/" style={linkStyle}>
-          <i className="fab fa-medium" style={iconStyle}/>
-        </a>
+        {social.linkedin && (
+          <a href={`https://www.linkedin.com/in/${social.linkedin}/`} style={linkStyle}>
+            <i className="fab fa-linkedin" style={iconStyle}/>
+          </a>
+        )}
+        {social.github && (
+          <a href={`https://www.github.com/${social.github}/`} style={linkStyle}>
+            <i className="fab fa-github" style={iconStyle}/>
+          </a>
+        )}
+        {social.medium && (
+          <a href={`https://medium.com/@${social.medium}/`} style={linkStyle}>
+            <i className="fab fa-medium" style={iconStyle}/>
+          </a>
+        )}
       </div>
     </div>
   )
