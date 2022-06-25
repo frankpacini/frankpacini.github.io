@@ -60,13 +60,21 @@
   display: none; /* for Chrome, Safari, and Opera */
 }
 
-/* .carousel .control-next.control-arrow:before {
+.carousel .control-next.control-arrow:before {
   border-left-color: #23283f;
 }
 
 .carousel .control-prev.control-arrow:before {
   border-right-color: #23283f;
-} */
+}
+
+.carousel-light .carousel.carousel-slider .control-arrow  {
+  background: rgba(0,0,0,0.2);
+}
+
+.carousel-dark .carousel.carousel-slider .control-arrow  {
+  background: rgba(219, 219, 219, 0.2);
+}
 
 .control-dots {
   background-color: rgba(0,0,0,0)

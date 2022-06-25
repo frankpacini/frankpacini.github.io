@@ -35,18 +35,18 @@ const ProjectPopup = ({ project }) => {
           <div style={{margin: "15px"}}>
             <h3 className="modal-title"> {project.name} </h3>
             <div className="modal-content">
-              <Carousel showThumbs={false}>
+              <Carousel showThumbs={false} className={`carousel-${themeName}`}>
                 {project.videos.map((video) => 
                   <ReactPlayer key={uniqid()} controls width="100%" url={video} />
                 )}
                 {project.pictures.map((picture) => 
-                  <div>
-                    <img key={uniqid()} src={picture} alt=""/>
-                  </div>
+                  <img key={uniqid()} src={picture} alt=""  style={{maxHeight: "75vh", width: "auto"}}/>
                 )}
               </Carousel>
 
-              <p className='project__description'>{project.description}</p>
+              <p className='project__description'>
+              {project.full_description === null || project.full_description === "" ? project.description : project.full_description}
+              </p>
 
               {project.stack && (
                 <ul className='project__stack'>
