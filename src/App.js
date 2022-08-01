@@ -3,6 +3,8 @@ import { ThemeContext } from './contexts/theme'
 import Particle from './components/Particle/Particle'
 import Header from './components/Header/Header'
 import About from './components/About/About'
+import Education from './components/Education/Education'
+import Experience from './components/Experience/Experience'
 import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
@@ -20,6 +22,8 @@ const App = () => {
         <Particle />
         <main>
           <About />
+          <Education/>
+          <Experience/>
           <Projects />
           <Skills />
           <Contact />
