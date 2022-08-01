@@ -40,11 +40,11 @@ const ProjectPopup = ({ project }) => {
                   <ReactPlayer key={uniqid()} controls width="100%" url={video} />
                 )}
                 {project.pictures.map((picture) => 
-                  <img key={uniqid()} src={picture} alt=""  style={{maxHeight: "75vh", width: "auto"}}/>
+                  <img key={uniqid()} src={picture} alt=""  style={{maxHeight: "50vh", width: "auto"}}/>
                 )}
               </Carousel>
 
-              <p className='project__description'>
+              <p className='project_full_description'>
               {project.full_description === null || project.full_description === "" ? project.description : project.full_description}
               </p>
 
