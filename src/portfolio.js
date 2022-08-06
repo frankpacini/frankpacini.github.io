@@ -104,7 +104,7 @@ const projects = [
       "/static/assets/eatwell_upload.png",
     ],
     videos: [
-      '/static/assets/eatwell.mp4'
+      'https://github.com/frankpacini/frankpacini.github.io/raw/main/public/static/assets/eatwell.mp4'
     ],
   },
   {
