@@ -23,7 +23,7 @@ const Education = () => {
                             <div className="media-content">
                                 <h3 className="title">{edu.name}</h3>
                                 <p className="subtitle" style={{marginBottom: '0.2rem'}}><em>{edu.degree}</em></p>
-                                <p className="subtitle is-6">{edu.date_start} - {edu.date_end}</p>
+                                <p className="subtitle is-6">{edu.date_start} - {edu.date_end}  &nbsp; | &nbsp; {`GPA: ${edu.gpa}`}</p>
                             </div>
                         </div>
                         <div className="content">
