@@ -15,17 +15,18 @@ const Particle = () => {
     particleGroundScript.src = "/static/libs/jquery.particleground.js";
     particleGroundScript.async = true;
 
-    const demoScript = document.createElement("script");
-    demoScript.type = "text/javascript"
-    demoScript.src = "/static/libs/demo.js";
-    demoScript.async = true;
-    demoScript.onload = () => {
-      console.log(demoScript)
-      window.runParticle();
+    particleGroundScript.onload = () => {
+      const demoScript = document.createElement("script");
+      demoScript.type = "text/javascript"
+      demoScript.src = "/static/libs/demo.js";
+      demoScript.async = true;
+      demoScript.onload = () => {
+        window.runParticle();
+      }
+      document.body.appendChild(demoScript);
     }
 
     document.body.appendChild(particleGroundScript);
-    document.body.appendChild(demoScript);
   }, [])
 
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
