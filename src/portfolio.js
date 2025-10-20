@@ -9,8 +9,8 @@ const about = {
   name: 'Frank Pacini',
   role: 'Software Engineer',
   description:
-    'Welcome to my portfolio! I\'m Frank, a senior at Boston University studying Computer Science and Statistics. I have experience across the development stack, and am interested in engineering roles where I can develop the platforms that make full scale data analytics and AI possible for organizations. Some of my notable experience and projects are shown below.',
-  resume: "resume.pdf",
+    'Welcome to my portfolio! I\'m Frank, a Software Engineer at Oracle Cloud Infrastructure and recent graduate from Boston University having majored in Computer Science and Statistics. I have experience across the development stack, and am interested in engineering roles where I can develop the platforms that make full scale data analytics and AI possible for organizations. Some of my notable experience and projects are shown below.',
+  resume: "Resume_Fall_2025.pdf",
   social: {
     linkedin: 'frank-pacini',
     github: 'frankpacini',
@@ -30,11 +30,27 @@ const education = [
       'Algorithms, Operating Systems, Programming Languages, Cybersecurity',
       'Linear Models, Mathematical Statistics, Stochastic Processes, Nonparametric Statistics (expected)'
     ],
-    gpa: '3.97',
+    gpa: '3.98',
   }
 ]
 
 const experience = [
+  {
+    name: "Oracle",
+    logo: 'https://play-lh.googleusercontent.com/lvUW3XukTSHnop1wGHVO1cn2EMwoEa2ZfjBhpIt0t1MhjWXa319OUHJ4zzzhdzf6Vis',
+    title: 'OCI Software Engineer',
+    date_start: 'July 2023',
+    date_end: 'Present',
+    description: 'Worked on a number of projects for the OCI Platform Integration team including developing a new OCI service from scratch and fulfilling technical lead, project management, and mentorship roles.',
+    bullets: [
+      'Served as Technical Lead driving development of a Public Control Plane Service in Java and React.js UI from initial design stages through the full SDLC to multi-realm service availability and deployment to the OCI Developer Portal. Represented the project in design and security reviews with OCI architects and numerous integrations with other OCI services.',
+      'Developed Python framework to automate resource deployment and integration process required to deliver Oracle’s cloud resale offering to large enterprise customers, reducing our team’s delivery timeline from 10 days to 1 day.',
+      'Architected pipeline framework to orchestrate large-scale upgrade of existing customer-specific regions to a more specialized cloud offering. Serving in project management capacity by coordinating deliverables from 30 service teams.',
+      'Created a custom extension to the OCI AuthZ SDK to improve maintainability of our organization\'s many service integrations across the OCI Platform.',
+      'Mentored two new-grad Software Engineers and a summer intern, teaching them OCI concepts, SDLC processes, development and debugging skills, and guiding them during project onboarding.'
+    ],
+    skills: ["Java", "Oracle Cloud", "Python", "CI/CD", "JavaScript", "Spring Boot"]
+  },
   {
     name: "Dell Technologies",
     logo: 'https://www.lesopportunites.com/wp-content/uploads/2022/03/DELL.png',
@@ -43,7 +59,7 @@ const experience = [
     date_end: 'August 2022',
     description: 'Developed Java extension for the Oracle Enterprise Manager database platform to collect and display hardware-level statistics and alerts.',
     bullets: [],
-    skills: ["Java", "Javascript", "Perl", "Oracle DB"]
+    skills: ["Java", "JavaScript", "Perl", "Oracle DB"]
   },
   {
     name: "BU Spark! & Civera Software",
