@@ -26,9 +26,9 @@ const education = [
     date_end: 'May 2023',
     description: 'Relevant Coursework:',
     bullets: [
-      'Deep Learning, Data Science, Machine Learning, NLP (expected), Big Data (expected)',
+      'Deep Learning, Data Science, Machine Learning, NLP, Big Data',
       'Algorithms, Operating Systems, Programming Languages, Cybersecurity',
-      'Linear Models, Mathematical Statistics, Stochastic Processes, Nonparametric Statistics (expected)'
+      'Linear Models, Stochastic Processes, Nonparametric Statistics, Causal Inference'
     ],
     gpa: '3.98',
   }
